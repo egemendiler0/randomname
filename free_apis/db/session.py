@@ -26,6 +26,7 @@ def get_db():
     finally:
         db.close()
 
+
 def get_sql_server_version(db):
     result = db.execute("SELECT @@VERSION")
     return result.fetchone()

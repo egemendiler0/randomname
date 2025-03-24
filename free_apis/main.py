@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from router.random_name_router import router as random_router
 from db.session import  get_db, get_sql_server_version
-from free_apis.utils import config
+from utils import config
 
 app = FastAPI()
 
