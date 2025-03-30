@@ -3,7 +3,7 @@ import re
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from utils import config
+from free_apis.utils import config
 
 router = APIRouter(prefix=config.ROUTER_PREFIX, tags=[config.TAG_WEATHER])
 
