@@ -3,3 +3,4 @@ fastapi
 dotenv
 sqlalchemy
 pyodbc
+alembic

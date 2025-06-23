@@ -1,0 +1,14 @@
+from sqlalchemy import Column, String, DateTime
+from sqlalchemy.sql import func
+from db.session import Base
+
+class ExampleTable(Base):
+    __tablename__ = "example_table"
+
+    name = Column(String, primary_key=True, index=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    created_by = Column(String)
+
+# This function is important for Alembic to discover models
+def get_metadata():
+    return Base.metadata
